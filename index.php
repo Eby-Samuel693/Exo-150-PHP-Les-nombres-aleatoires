@@ -5,7 +5,8 @@
  */
 
 // TODO Votre code ici.
-
+$nombreAleatoir = rand( 0 ,50 );
+echo $nombreAleatoir ,"<br>";
 
 
 /**
@@ -13,6 +14,9 @@
  */
 
 // TODO Votre code ici.
+
+$nombre = rand(50 , getrandmax());
+echo $nombre,"<br>";
 
 
 /**
@@ -22,7 +26,14 @@
  */
 
 // TODO Votre code ici.
+$nomber = rand(0, 100);
+if($nomber < 50) {
+    echo $nomber," ","vous avez gagné <br> ";
 
+}
+else {
+    echo $nomber," ","vous avez perdu <br>";
+}
 
 /**
  * 4. Créez une fonction qui génère un nombre aléatoire compris entre $max et $min ( paramètres ).
@@ -32,9 +43,10 @@
 
 // TODO Votre code ici.
 
-
-
-
-
-
-
+function exo4($max , $min) {
+    $fonction = rand(0, 1000);
+    if ($fonction > 500) {
+        return exo4($fonction, 1000);
+    }
+    return $fonction;
+}
